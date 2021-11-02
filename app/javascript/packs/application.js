@@ -4,7 +4,7 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
-require("turbolinks").start()
+// require("turbolinks").start() //画面遷移の高速化Gem,JavaScriptの動作の阻害になる場合があるので注意
 require("@rails/activestorage").start()
 require("channels")
 
