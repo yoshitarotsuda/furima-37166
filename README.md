@@ -33,9 +33,8 @@
 
 ### Association
 
-- has_one : credit_cards
-- has_one : delivery_destinations
-- belongs_to :users
+- has_one : orders
+- belongs_to :user
 
 ## ordersテーブル
 
