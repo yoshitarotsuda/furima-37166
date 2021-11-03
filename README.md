@@ -38,7 +38,7 @@
 - has_one : delivery_destinations
 - belongs_to :users
 
-## credit_cards
+## ordersテーブル
 
 | Column             | Type       | Options                       |
 | ------------------ | ---------- | ----------------------------- |
