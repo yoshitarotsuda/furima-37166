@@ -14,17 +14,17 @@
 
 ### Association
 
-- has_many : products
+- has_many : items
 - has_many : credit_cards
 
-## productsテーブル
+## itemsテーブル
 
 | Column               | Type       | Options                       |
 | -------------------- | ---------- | ----------------------------- |
-| products_name        | string     | null: false                   |
-| products_description | text       | null: false                   |
-| products_category_id | integer    | null: false                   |
-| products_state_id    | integer    | null: false                   |
+| item_name            | string     | null: false                   |
+| item_description     | text       | null: false                   |
+| item_category_id     | integer    | null: false                   |
+| item_state_id        | integer    | null: false                   |
 | delivery_charge_id   | integer    | null: false                   |
 | delivery_area_id     | integer    | null: false                   |
 | delivery_day_id      | integer    | null: false                   |
@@ -41,12 +41,12 @@
 | Column             | Type       | Options                       |
 | ------------------ | ---------- | ----------------------------- |
 | user               | references | null: false, foreign_key:true |
-| product            | references | null: false, foreign_key:true |
+| item               | references | null: false, foreign_key:true |
 
 ### Association
 
 - belongs_to : user
-- belongs_to : product
+- belongs_to : item
 - has_one : delivery_destination
 
 ## delivery_destinations
@@ -60,7 +60,6 @@
 | building_name      | string     |                               |
 | phone_number       | integer    | null: false                   |
 | user               | references | null: false, foreign_key:true |
-| product            | references | null: false, foreign_key:true |
 
 ### Association
 
@@ -78,7 +77,7 @@
 
   外部キーとは、関連する他のテーブルのレコードの主キーを値とする項目。
 
-  例)ここでのproductsに対する、『user』
+  例)ここでitemsに対する、『user』
 
 - 主キー制約
 

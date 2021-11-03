@@ -34,22 +34,22 @@
                 <mxCell id="drJjomzJPlkLiz0vsGmV-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="drJjomzJPlkLiz0vsGmV-22" source="drJjomzJPlkLiz0vsGmV-29" target="drJjomzJPlkLiz0vsGmV-29" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="drJjomzJPlkLiz0vsGmV-46" value="productsテーブル" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;rounded=1;labelBackgroundColor=none;fillColor=#eeeeee;strokeColor=#36393d;fontColor=#000000;" parent="VafTBtpye_XPdqLhDcZI-1" vertex="1">
+                <mxCell id="drJjomzJPlkLiz0vsGmV-46" value="itemsテーブル" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;rounded=1;labelBackgroundColor=none;fillColor=#eeeeee;strokeColor=#36393d;fontColor=#000000;" parent="VafTBtpye_XPdqLhDcZI-1" vertex="1">
                     <mxGeometry x="420" y="80" width="280" height="326" as="geometry"/>
                 </mxCell>
                 <mxCell id="drJjomzJPlkLiz0vsGmV-47" value="image (NOT NULL)  ActiveStrageで実装" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#3333FF;" parent="drJjomzJPlkLiz0vsGmV-46" vertex="1">
                     <mxGeometry y="26" width="280" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="drJjomzJPlkLiz0vsGmV-48" value="product_name (string型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-46" vertex="1">
+                <mxCell id="drJjomzJPlkLiz0vsGmV-48" value="item_name (string型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-46" vertex="1">
                     <mxGeometry y="56" width="280" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="drJjomzJPlkLiz0vsGmV-49" value="product_description (text型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-46" vertex="1">
+                <mxCell id="drJjomzJPlkLiz0vsGmV-49" value="item_description (text型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-46" vertex="1">
                     <mxGeometry y="86" width="280" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="drJjomzJPlkLiz0vsGmV-50" value="product_category_id (integer型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;labelBackgroundColor=none;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-46" vertex="1">
+                <mxCell id="drJjomzJPlkLiz0vsGmV-50" value="item_category_id (integer型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;labelBackgroundColor=none;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-46" vertex="1">
                     <mxGeometry y="116" width="280" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="drJjomzJPlkLiz0vsGmV-51" value="product_state_id (integer型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;labelBackgroundColor=none;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-46" vertex="1">
+                <mxCell id="drJjomzJPlkLiz0vsGmV-51" value="item_state_id (integer型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;labelBackgroundColor=none;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-46" vertex="1">
                     <mxGeometry y="146" width="280" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="drJjomzJPlkLiz0vsGmV-53" value="delivery_charge_id (integer型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-46" vertex="1">
@@ -85,7 +85,7 @@
                 <mxCell id="drJjomzJPlkLiz0vsGmV-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="drJjomzJPlkLiz0vsGmV-59" source="drJjomzJPlkLiz0vsGmV-61" target="drJjomzJPlkLiz0vsGmV-61" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="drJjomzJPlkLiz0vsGmV-101" value="product (references型, NOT NULL, 外部キー)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-59" vertex="1">
+                <mxCell id="drJjomzJPlkLiz0vsGmV-101" value="item (references型, NOT NULL, 外部キー)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-59" vertex="1">
                     <mxGeometry y="146" width="310" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="drJjomzJPlkLiz0vsGmV-66" value="delivery_destinationsテーブル" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;rounded=1;labelBackgroundColor=none;fillColor=#eeeeee;strokeColor=#36393d;fontColor=#000000;" parent="VafTBtpye_XPdqLhDcZI-1" vertex="1">
