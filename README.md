@@ -14,8 +14,8 @@
 
 ### Association
 
-- has_many : items
-- has_many : orders
+- has_many :items
+- has_many :orders
 
 ## itemsテーブル
 
@@ -33,8 +33,8 @@
 
 ### Association
 
-- has_one : orders
-- belongs_to : user
+- has_one :order
+- belongs_to :user
 
 ## ordersテーブル
 
@@ -45,9 +45,9 @@
 
 ### Association
 
-- belongs_to : user
-- belongs_to : item
-- has_one : delivery_destination
+- belongs_to :user
+- belongs_to :item
+- has_one :delivery_destination
 
 ## delivery_destinations
 
@@ -63,7 +63,7 @@
 
 ### Association
 
-- belong_to : order
+- belong_to :order
 
 ### 日本語メモ
 
