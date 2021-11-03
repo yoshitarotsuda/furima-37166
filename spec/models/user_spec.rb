@@ -1,5 +1,12 @@
 require 'rails_helper'
 
+# BASIC認証テストのメモ
+# def basic_pass(path)
+#   username = ENV["STUDY"] 
+#   password = ENV["STUDY_password"]
+#   visit "http://#{username}:#{password}@#{Capybara.current_session.server.host}:#{Capybara.current_session.server.port}#{path}"
+# end
+
 RSpec.describe User, type: :model do
   before do
     @user = FactoryBot.build(:user)
