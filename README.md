@@ -23,11 +23,11 @@
 | -------------------- | ---------- | ----------------------------- |
 | products_name        | string     | null: false                   |
 | products_description | text       | null: false                   |
-| products_category    | string     | null: false                   |
-| products_state       | string     | null: false                   |
-| delivery_charge      | string     | null: false                   |
-| delivery_area        | string     | null: false                   |
-| delivery_days        | string     | null: false                   |
+| products_category_id | integer    | null: false                   |
+| products_state_id    | integer    | null: false                   |
+| delivery_charge_id   | integer    | null: false                   |
+| delivery_area_id     | integer    | null: false                   |
+| delivery_day_id      | integer    | null: false                   |
 | price                | string     | null: false                   |
 | user                 | references | null: false, foreign_key:true |
 
