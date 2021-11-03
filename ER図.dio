@@ -94,7 +94,7 @@
                 <mxCell id="drJjomzJPlkLiz0vsGmV-67" value="postal_code (string型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-66" vertex="1">
                     <mxGeometry y="26" width="280" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="drJjomzJPlkLiz0vsGmV-68" value="prefectures (string型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-66" vertex="1">
+                <mxCell id="2" value="delivery_area_id (integer型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" vertex="1" parent="drJjomzJPlkLiz0vsGmV-66">
                     <mxGeometry y="56" width="280" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="drJjomzJPlkLiz0vsGmV-69" value="city (string型, NOT NULL)" style="text;strokeColor=#36393d;fillColor=#eeeeee;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="drJjomzJPlkLiz0vsGmV-66" vertex="1">
