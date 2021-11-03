@@ -11,13 +11,15 @@ class User < ApplicationRecord
 
   validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めてください'
   
-  with_options presence: true, format:{ with: ZENKAKU_REGEX, message: '全角文字を使用してください' } do
+  with_options presence: true, format:{ with: ZENKAKU_REGEX, message: 'には全角文字を使用してください' } do
     validates :family_name
     validates :first_name
   end
 
-  with_options presence: true, format:{ with: KANA_REGEX, message: '全角カナ文字を使用してください' } do
+  with_options presence: true, format:{ with: KANA_REGEX, message: 'には全角カナ文字を使用してください' } do
     validates :family_name_kana
     validates :first_name_kana
   end
+
+  validates :birth_day, presence: true
 end
