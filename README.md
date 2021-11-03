@@ -16,7 +16,6 @@
 
 - has_many : products
 - has_many : credit_cards
-- has_many : delivery_destinations
 
 ## productsテーブル
 
@@ -65,7 +64,6 @@
 
 ### Association
 
-- belong_to : users
 - belong_to : products
 
 ### 日本語メモ
