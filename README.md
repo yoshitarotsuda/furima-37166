@@ -15,7 +15,7 @@
 ### Association
 
 - has_many : items
-- has_many : credit_cards
+- has_many : orders
 
 ## itemsテーブル
 
