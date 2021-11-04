@@ -9,7 +9,7 @@ class User < ApplicationRecord
   ZENKAKU_REGEX = /\A[ぁ-んァ-ン一-龥々ー]+\z/.freeze # 全角ひらがなカタカナ漢字、utf-8で記号と認識される「々」と長音記号「ー」も追加
   KANA_REGEX = /\A[ァ-ヶー－]+\z/.freeze # 全角カタカナ
 
-  validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めてください'
+  validates_format_of :password, with: PASSWORD_REGEX, message: 'には半角で英数字の両方を含めてください'
   
   with_options presence: true, format:{ with: ZENKAKU_REGEX, message: 'には全角文字を使用してください' } do
     validates :family_name
