@@ -10,5 +10,6 @@ class ItemCategory < ActiveHash::Base
     { id: 7, date: '家電・スマホ・カメラ' },
     { id: 8, date: 'スポーツ・レジャー' },
     { id: 9, date: 'ハンドメイド' },
-    { id: 10, date: 'その他' },
+    { id: 10, date: 'その他' }
+  ]
 end
