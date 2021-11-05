@@ -7,7 +7,7 @@ class Item < ApplicationRecord
   belongs_to :item_state
   belongs_to :delivery_charge
   belongs_to :delivery_area
-  belongs_to :delivery_day_id
+  belongs_to :delivery_day
 
   with_options presence: true do #with_options オプションの記述をまとめるのに使える、if使用時の記述パターンに注意
     validates :item_name
