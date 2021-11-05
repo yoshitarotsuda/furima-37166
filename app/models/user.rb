@@ -3,8 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
-  
+         
   PASSWORD_REGEX = /\A(?=.*?[A-z])(?=.*?[\d])[A-z\d]+\z/i.freeze # 半角英数混合1字以上
   ZENKAKU_REGEX = /\A[ぁ-んァ-ン一-龥々ー]+\z/.freeze # 全角ひらがなカタカナ漢字、utf-8で記号と認識される「々」と長音記号「ー」も追加
   KANA_REGEX = /\A[ァ-ヶー－]+\z/.freeze # 全角カタカナ
