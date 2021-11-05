@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
   belongs_to :user
 
-  # 選択肢用のアソシエーション
+  # 選択肢用のアソシエーション 記述するときにカラム名にしないように注意
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :item_category
   belongs_to :item_state
@@ -19,9 +19,8 @@ class Item < ApplicationRecord
       validates :delivery_area_id
       validates :delivery_day_id
     end
-    validates :price, numericality: { greater_than_or_equal_to: 300,less_than_or_equal_to: 9999999 ,message: "300~9999999で入力してください"}
-    # validates :price, numericality: { in: 300..9999999,message: "300~9999999で入力してください"} 6.1から
-    
+    validates :price, numericality: { greater_than_or_equal_to: 300,less_than_or_equal_to: 9999999 ,message: "金額は300~9999999で入力してください"}
+    # validates :price, numericality: { in: 300..9999999,message: "300~9999999で入力してください"} Rails 6.1から Rails 6.0.4.1では不可
   end
 
 end
