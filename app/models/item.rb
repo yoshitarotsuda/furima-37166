@@ -12,14 +12,16 @@ class Item < ApplicationRecord
   with_options presence: true do #with_options オプションの記述をまとめるのに使える、if使用時の記述パターンに注意
     validates :item_name
     validates :item_description
-    validates :price
+    with_options numericality: { other_than: 0, message: "can't be blank"} do
+      validates :item_category_id
+      validates :item_state_id
+      validates :delivery_charge_id
+      validates :delivery_area_id
+      validates :delivery_day_id
+    end
+    validates :price, numericality: { greater_than_or_equal_to: 300,less_than_or_equal_to: 9999999 ,message: "300~9999999で入力してください"}
+    # validates :price, numericality: { in: 300..9999999,message: "300~9999999で入力してください"} 6.1から
+    
   end
 
-  with_options presence: true, numericality: { other_than: 0, message: "can't be blank"} do
-    validates :item_category_id
-    validates :item_state_id
-    validates :delivery_charge_id
-    validates :delivery_area_id
-    validates :delivery_day_id
-  end
 end
