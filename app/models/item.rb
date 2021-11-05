@@ -10,6 +10,7 @@ class Item < ApplicationRecord
   belongs_to :delivery_day
 
   with_options presence: true do #with_options オプションの記述をまとめるのに使える、if使用時の記述パターンに注意
+    validates :image
     validates :item_name
     validates :item_description
     with_options numericality: { other_than: 0, message: "can't be blank"} do
