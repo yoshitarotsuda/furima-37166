@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  belong_to :user
+  belongs_to :user
 
   # 選択肢用のアソシエーション
   extend ActiveHash::Associations::ActiveRecordExtensions
