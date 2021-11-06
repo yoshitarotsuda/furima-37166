@@ -11,7 +11,12 @@ RSpec.describe Item, type: :model do
         expect(@item).to be_valid
       end
     end
-    context '商品の出品ができる時' do
+    context '商品の出品ができない時' do
+      it 'userが紐付いていなければ出品できない' do
+        @item.user = nil
+        @item.valid?
+        expect(@item.errors.full_messages).to include("User must exist")
+      end
       it '商品画像が空では登録できない' do # データがActiveStrageに格納できるか、サイズはどうかなどかは一時保留
         @item.image = nil # ''ではエラーが出る
         @item.valid?
@@ -92,8 +97,13 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Price 金額は半角で300~9999999で入力してください")
       end
-      it '価格の情報は300以上9999999以下でなければ登録できない' do
-        @item.price = '200'
+      it '価格の情報は300円未満では登録できない' do
+        @item.price = '299'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price 金額は半角で300~9999999で入力してください")
+      end
+      it '価格は9,999,999円を超えると登録できない' do
+        @item.price = '10000000000000'
         @item.valid?
         expect(@item.errors.full_messages).to include("Price 金額は半角で300~9999999で入力してください")
       end
