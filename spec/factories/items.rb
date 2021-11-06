@@ -9,5 +9,9 @@ FactoryBot.define do
     delivery_day_id    {1}
     price              {500}
     association :user
+
+    after(:build) do |item|
+      item.image.attach(io: File.open('public/test.webp'), filename: 'test.webp')
+    end
   end
 end
