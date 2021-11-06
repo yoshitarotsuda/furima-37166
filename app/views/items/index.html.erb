@@ -129,13 +129,12 @@
     <ul class='item-lists'>
 
       <% if @items.present? %> <%# 変数の有無の判定 参考資料のメモ書きとして記述します 類似機能で .nil? .empty? .blank?などもあります ?のつけ忘れに気をつけましょう %>
-        <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
         <% @items.each do |item| %>
           <li class='list'>
             <%= link_to "#" do %>
             <div class='item-img-content'>
               <%= image_tag item.image, class: "item-img" %>
-              <%# 一時sold out 削除 %>
+              <%# 商品販売機能実装まで一時削除 %>
               <%# 商品が売れていればsold outを表示しましょう %>
               <%# <div class='sold-out'> %>
                 <%# <span>Sold Out!!</span> %>
@@ -158,10 +157,7 @@
             <% end %>
           </li>
         <% end %>
-        <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
       <% else %>
-        <%# 商品がない場合は以下のダミー商品が表示されるようにしましょう %>
-        <%# 商品がある場合は表示されないようにしましょう %>
         <li class='list'>
           <%= link_to '#' do %>
           <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
@@ -179,8 +175,6 @@
           </div>
           <% end %>
         </li>
-        <%# //商品がある場合は表示されないようにしましょう %>
-        <%# //商品がない場合は以下のダミー商品が表示されるようにしましょう %>
       <% end %>
     </ul>
   </div>
