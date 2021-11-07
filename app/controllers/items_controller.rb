@@ -41,7 +41,14 @@ class ItemsController < ApplicationController
     end
   end
 
-  def destroy
+  def destroy # 追加実装では確認ボタン、確認ページを設けることを考慮
+    if current_user.id == @item.user_id
+      kesu = Item.find(params[:id])
+      kesu.destroy
+      redilect_to root_path
+    else
+      render 'show'
+    end
   end
 
   private
