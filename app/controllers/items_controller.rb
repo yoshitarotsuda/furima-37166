@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  # before_action :authenticate_user!, except: [:index,:show] # 現場リダイレクト先が確定してないので封鎖
+  before_action :authenticate_user!, except: [:index,:show] # ログアウトユーザーの移動先限定、指定対象外はroot_pathへ移動
   
   def index
     @items = Item.all.order("created_at DESC")
