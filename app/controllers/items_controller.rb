@@ -35,10 +35,12 @@ class ItemsController < ApplicationController
   end
 
   def update
+      # binding.pry
     @item = Item.find(params[:id])
     if @item.update(item_params)
       redirect_to item_path(@item.id)
     else
+      # binding.pry
       render 'edit'
     end
   end

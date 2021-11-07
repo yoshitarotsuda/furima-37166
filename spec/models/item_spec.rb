@@ -83,7 +83,7 @@ RSpec.describe Item, type: :model do
         @item.delivery_day_id = '0'
         @item.valid?
         expect(@item.errors.full_messages).to include("Delivery day can't be blank")
-        @item.delivery_day_id = '55'
+        @item.delivery_day_id = '10'
         @item.valid?
         expect(@item.errors.full_messages).to include("Delivery day can't be blank") # 空白の選択肢です
       end

@@ -16,12 +16,12 @@ class Item < ApplicationRecord
     validates :image
     validates :item_name
     validates :item_description
-    with_options numericality: { other_than: 0, message: "can't be blank"} do
-      validates :item_category_id, numericality: {greater_than_or_equal_to: 1,less_than_or_equal_to: 10} # only_integer:trueはおそらく不要
-      validates :item_state_id, numericality: {greater_than_or_equal_to: 1,less_than_or_equal_to: 6 }
-      validates :delivery_charge_id, numericality: {greater_than_or_equal_to: 1,less_than_or_equal_to: 2 }
-      validates :delivery_area_id, numericality: { greater_than_or_equal_to: 2,less_than_or_equal_to: 48 }
-      validates :delivery_day_id, numericality: { greater_than_or_equal_to: 1,less_than_or_equal_to: 3 }
+    with_options numericality: { other_than: 0, message: "can't be blank"} do # 以下の選択肢に対するバリデーションや分岐は追加実装を多少考えているので残します
+      validates :item_category_id # , numericality: { other_than: 0, greater_than_or_equal_to: 1,less_than_or_equal_to: 10, message: "can't be blank"} # only_integer:trueはおそらく不要
+      validates :item_state_id # , numericality: { other_than: 0, greater_than_or_equal_to: 1,less_than_or_equal_to: 6, message: "can't be blank"}
+      validates :delivery_charge_id # , numericality: { other_than: 0, greater_than_or_equal_to: 1,less_than_or_equal_to: 2, message: "can't be blank" }
+      validates :delivery_area_id #, numericality: { other_than: 0, greater_than_or_equal_to: 2,less_than_or_equal_to: 48, message: "can't be blank" }
+      validates :delivery_day_id # , numericality: { other_than: 0, greater_than_or_equal_to: 1,less_than_or_equal_to: 3,message: "can't be blank" }
     end
     validates :price, numericality: { with: NUMBER_REGEX, greater_than_or_equal_to: 300,less_than_or_equal_to: 9999999 ,message: "金額は半角で300~9999999で入力してください"}
     # validates :price, numericality: { in: 300..9999999,message: "300~9999999で入力してください"} Rails 6.1から Rails 6.0.4.1では不可
