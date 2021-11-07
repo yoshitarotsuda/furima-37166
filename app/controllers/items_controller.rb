@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index,:show] # deviceメソッド、ログアウトユーザーの移動先限定、指定対象外はログイン画面へ移動
-  before_action :set_item, only: [:show, :edit, :update]
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
     @items = Item.all.order("created_at DESC")
@@ -42,9 +42,8 @@ class ItemsController < ApplicationController
   end
 
   def destroy # 追加実装では確認ボタン、確認ページを設けることを考慮
-    kesu = Item.find(params[:id])
-    if current_user.id == kesu.user_id
-      kesu.destroy
+    if current_user.id == @item.user_id
+      @item.destroy
       redirect_to root_path
     else
       render 'show'
