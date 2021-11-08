@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order_delivery = OrderDelivery.new
+    @order_delivery = OrderDelivery.new(order_params)
     if @order_delivery.valid?
       @order_delivery.save
       redirect_to root_path
@@ -17,7 +17,7 @@ class OrdersController < ApplicationController
   private
   
   def order_params
-    params.require(:order_delivery).permit(:item_id, :postal_code, :delivery_area_id, :city, :block, :building_name, :phone_number)merge(user_id: current_user.id)
+    params.require(:order_delivery).permit(:postal_code, :delivery_area_id, :city, :block, :building_name, :phone_number).merge(user_id: current_user.id,item_id: params[:item_id])
   end
 
 end
