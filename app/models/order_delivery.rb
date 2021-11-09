@@ -10,6 +10,7 @@ class OrderDelivery
     validates :city
     validates :block
     validates :phone_number, format: {with: /\A[0-9]{10,11}\z/, message:"ハイフン無しの10文字から11文字の半角数値で入力してください"}
+    validates :token
   end
 
   def save
