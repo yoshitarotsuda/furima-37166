@@ -3,6 +3,7 @@ class Item < ApplicationRecord
   NUMBER_REGEX = /\A[0-9]+\z/.freeze # 半角数値
 
   belongs_to :user
+  has_one :order
   has_one_attached :image
   # 選択肢用のアソシエーション 記述するときにカラム名にしないように注意
   extend ActiveHash::Associations::ActiveRecordExtensions
