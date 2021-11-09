@@ -19,6 +19,16 @@ RSpec.describe OrderDelivery, type: :model do
       end
     end
     context '購入ができない場合' do
+      it 'userが紐付いてなければ保存できない' do
+        @order_delivery.user_id = nil
+        @order_delivery.valid?
+        expect(@order_delivery.errors.full_messages).to include("User can't be blank")
+      end
+      it 'itemが紐づいてなければ保存できない'do
+      @order_delivery.item_id = nil
+      @order_delivery.valid?
+      expect(@order_delivery.errors.full_messages).to include("Item can't be blank")
+      end
       it 'postal_codeが空だと保存できない' do
         @order_delivery.postal_code =''
         @order_delivery.valid?
