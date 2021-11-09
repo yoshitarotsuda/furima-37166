@@ -2,7 +2,11 @@ class OrdersController < ApplicationController
   before_action :authenticate_user! # 注文関連の繊維は全て認めないのでこれで設定
   before_action :set_item, only: [:index, :create]
   def index
-    @order_delivery = OrderDelivery.new
+    if Order.exists?(item_id: @item.id) || current_user.id = @item.user_id
+      redirect_to root_path
+    else
+      @order_delivery = OrderDelivery.new
+    end
   end
 
   def create 
