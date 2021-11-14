@@ -24,6 +24,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @comments = Comment.where(item_id: @item.id).includes(:user)
   end
 
   def edit # 参考資料としてのメモ書きです editは「編集」であり、編集するモデルを特定し、編集された内容を受け取り、updateアクションに内容を送信します。「更新」ではありません。
