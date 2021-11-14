@@ -96,6 +96,7 @@
     <% if comment.user.id == current_user.id %>
       <%= link_to "削除",item_comment_path(@item.id,comment.id), method: :delete %>
     <% end %>
+      <a href="#" >　通報(機能未実装)</a>
     </p>
     <% end %>
   </div>
