@@ -92,7 +92,11 @@
   </div>
   <div class="comment-list">
     <% @comments.each do |comment| %>
-    <p><%= comment.comment%></p>
+    <p><%= comment.comment%><span>(投稿者:</span><%= comment.user.family_name%><%= comment.user.first_name%><span>)</span>
+    <% if comment.user.id == current_user.id %>
+      <a href="#">削除</a>
+    <% end %>
+    </p>
     <% end %>
   </div>
   <div class="links">
