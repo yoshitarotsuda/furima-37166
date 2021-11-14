@@ -94,7 +94,7 @@
     <% @comments.each do |comment| %>
     <p><%= comment.comment%><span>(投稿者:</span><%= comment.user.family_name%><%= comment.user.first_name%><span>)</span>
     <% if comment.user.id == current_user.id %>
-      <a href="#">削除</a>
+      <%= link_to "削除",item_comment_path(@item.id,comment.id), method: :delete %>
     <% end %>
     </p>
     <% end %>
