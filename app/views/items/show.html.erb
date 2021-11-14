@@ -90,6 +90,11 @@
       </button>
     <% end %>
   </div>
+  <div class="comment-list">
+    <% @comments.each do |comment| %>
+    <p><%= comment.comment%></p>
+    <% end %>
+  </div>
   <div class="links">
     <a href="#" class="change-item-btn">
       ＜ 前の商品

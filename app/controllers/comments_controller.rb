@@ -2,7 +2,9 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    @comment.save
+    if @comment.save
+      redirect_to item_path(params[:item_id])
+    end
   end
 
   private
